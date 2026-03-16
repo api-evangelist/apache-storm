@@ -1,0 +1,34 @@
+aid: apache-storm
+name: Apache Storm
+description: >-
+  Apache Storm is a free and open-source distributed real-time computation system that makes it easy to reliably process unbounded streams of data. It provides a simple API for stream processing with guaranteed message processing.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Stream Processing
+  - Real-Time
+  - Distributed Computing
+  - Event Processing
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apache-storm/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: apache-storm:apache-storm
+    name: Apache Storm
+    description: >-
+      Storm provides a Spout/Bolt programming API in Java and Clojure for stream processing topologies, the Trident high-level API for stateful stream processing, Flux YAML-based topology API, and a REST API for cluster monitoring and management.
+    humanURL: https://storm.apache.org/releases/current/index.html
+    tags:
+      - Java
+      - Stream Processing
+      - REST
+    properties:
+      - type: Documentation
+        url: https://storm.apache.org/releases/current/index.html
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
