@@ -7,10 +7,10 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Stream Processing
-  - Real-Time
   - Distributed Computing
   - Event Processing
+  - Real-Time
+  - Stream Processing
 created: '2026-03-16'
 modified: '2026-03-16'
 url: >-
@@ -24,8 +24,8 @@ apis:
     humanURL: https://storm.apache.org/releases/current/index.html
     tags:
       - Java
-      - Stream Processing
       - REST
+      - Stream Processing
     properties:
       - type: Documentation
         url: https://storm.apache.org/releases/current/index.html
