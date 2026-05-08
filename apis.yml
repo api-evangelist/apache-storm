@@ -38,6 +38,8 @@ apis:
     properties:
       - type: Documentation
         url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+      - url: openapi/apache-storm-openapi.yml
+        type: OpenAPI
   - aid: apache-storm:apache-storm-topology-api
     name: Apache Storm Topology API
     description: >-

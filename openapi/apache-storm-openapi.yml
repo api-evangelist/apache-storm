@@ -1,0 +1,274 @@
+openapi: 3.1.0
+info:
+  title: Apache Storm UI REST API
+  version: "1.0"
+  description: >-
+    Minimal OpenAPI for the Apache Storm UI REST API exposing cluster,
+    supervisor, nimbus, topology, and DRPC operations.
+servers:
+  - url: http://localhost:8080
+    description: Storm UI
+x-generated-from: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+x-generated-by: claude-crawl-2026-05-08
+paths:
+  /api/v1/cluster/configuration:
+    get:
+      summary: Cluster configuration
+      responses:
+        "200":
+          description: OK
+  /api/v1/cluster/summary:
+    get:
+      summary: Cluster summary
+      responses:
+        "200":
+          description: OK
+  /api/v1/supervisor/summary:
+    get:
+      summary: Supervisor summary
+      responses:
+        "200":
+          description: OK
+  /api/v1/nimbus/summary:
+    get:
+      summary: Nimbus summary
+      responses:
+        "200":
+          description: OK
+  /api/v1/history/summary:
+    get:
+      summary: Topology history summary
+      responses:
+        "200":
+          description: OK
+  /api/v1/supervisor:
+    get:
+      summary: Supervisor details
+      responses:
+        "200":
+          description: OK
+  /api/v1/owner-resources:
+    get:
+      summary: Owner resource summary
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/summary:
+    get:
+      summary: Topology summary
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology-workers/{id}:
+    get:
+      summary: Topology workers
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}:
+    get:
+      summary: Topology details
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/metrics:
+    get:
+      summary: Topology metrics
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/component/{component}:
+    get:
+      summary: Component stats
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+        - name: component
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/profiling/start/{host-port}/{timeout}:
+    post:
+      summary: Start profiling
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+        - name: host-port
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: timeout
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/profiling/dumpprofile/{host-port}:
+    post:
+      summary: Dump profile
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+        - name: host-port
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/profiling/stop/{host-port}:
+    post:
+      summary: Stop profiling
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+        - name: host-port
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/profiling/dumpjstack/{host-port}:
+    post:
+      summary: Dump jstack
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+        - name: host-port
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/profiling/dumpheap/{host-port}:
+    post:
+      summary: Dump heap
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+        - name: host-port
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/profiling/restartworker/{host-port}:
+    post:
+      summary: Restart worker
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+        - name: host-port
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/activate:
+    post:
+      summary: Activate topology
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/deactivate:
+    post:
+      summary: Deactivate topology
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/rebalance/{wait-time}:
+    post:
+      summary: Rebalance topology
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+        - name: wait-time
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /api/v1/topology/{id}/kill/{wait-time}:
+    post:
+      summary: Kill topology
+      parameters:
+        - $ref: "#/components/parameters/TopologyId"
+        - name: wait-time
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /drpc/{func}:
+    get:
+      summary: DRPC function call (GET)
+      parameters:
+        - name: func
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    post:
+      summary: DRPC function call (POST)
+      parameters:
+        - name: func
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+  /drpc/{func}/{args}:
+    get:
+      summary: DRPC function call with args
+      parameters:
+        - name: func
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: args
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+components:
+  parameters:
+    TopologyId:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  schemas:
+    GenericObject:
+      type: object
