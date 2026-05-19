@@ -1,0 +1,948 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Apache Storm UI REST API
+  description: 'Apache Storm UI REST API. 25 operations. Lead operation: Cluster configuration. Self-contained Naftiko capability
+    covering one Apache Storm business surface.'
+  tags:
+  - Apache Storm
+  - Apache Storm UI REST API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    APACHE_STORM_API_KEY: APACHE_STORM_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: apache-storm
+    baseUri: http://localhost:8080
+    description: Apache Storm UI REST API business capability. Self-contained, no shared references.
+    resources:
+    - name: api-v1-cluster-configuration
+      path: /api/v1/cluster/configuration
+      operations:
+      - name: get
+        method: GET
+        description: Cluster configuration
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-cluster-summary
+      path: /api/v1/cluster/summary
+      operations:
+      - name: get
+        method: GET
+        description: Cluster summary
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-history-summary
+      path: /api/v1/history/summary
+      operations:
+      - name: get
+        method: GET
+        description: Topology history summary
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-nimbus-summary
+      path: /api/v1/nimbus/summary
+      operations:
+      - name: get
+        method: GET
+        description: Nimbus summary
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-owner-resources
+      path: /api/v1/owner-resources
+      operations:
+      - name: get
+        method: GET
+        description: Owner resource summary
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-supervisor
+      path: /api/v1/supervisor
+      operations:
+      - name: get
+        method: GET
+        description: Supervisor details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-supervisor-summary
+      path: /api/v1/supervisor/summary
+      operations:
+      - name: get
+        method: GET
+        description: Supervisor summary
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-topology-workers-id
+      path: /api/v1/topology-workers/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Topology workers
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-topology-summary
+      path: /api/v1/topology/summary
+      operations:
+      - name: get
+        method: GET
+        description: Topology summary
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-topology-id
+      path: /api/v1/topology/{id}
+      operations:
+      - name: get
+        method: GET
+        description: Topology details
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-topology-id-activate
+      path: /api/v1/topology/{id}/activate
+      operations:
+      - name: post
+        method: POST
+        description: Activate topology
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-topology-id-component-component
+      path: /api/v1/topology/{id}/component/{component}
+      operations:
+      - name: get
+        method: GET
+        description: Component stats
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: component
+          in: path
+          type: string
+          required: true
+    - name: api-v1-topology-id-deactivate
+      path: /api/v1/topology/{id}/deactivate
+      operations:
+      - name: post
+        method: POST
+        description: Deactivate topology
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-topology-id-kill-wait-time
+      path: /api/v1/topology/{id}/kill/{wait-time}
+      operations:
+      - name: post
+        method: POST
+        description: Kill topology
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: wait-time
+          in: path
+          type: string
+          required: true
+    - name: api-v1-topology-id-metrics
+      path: /api/v1/topology/{id}/metrics
+      operations:
+      - name: get
+        method: GET
+        description: Topology metrics
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: api-v1-topology-id-profiling-dumpheap-host-port
+      path: /api/v1/topology/{id}/profiling/dumpheap/{host-port}
+      operations:
+      - name: post
+        method: POST
+        description: Dump heap
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: host-port
+          in: path
+          type: string
+          required: true
+    - name: api-v1-topology-id-profiling-dumpjstack-host-port
+      path: /api/v1/topology/{id}/profiling/dumpjstack/{host-port}
+      operations:
+      - name: post
+        method: POST
+        description: Dump jstack
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: host-port
+          in: path
+          type: string
+          required: true
+    - name: api-v1-topology-id-profiling-dumpprofile-host-port
+      path: /api/v1/topology/{id}/profiling/dumpprofile/{host-port}
+      operations:
+      - name: post
+        method: POST
+        description: Dump profile
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: host-port
+          in: path
+          type: string
+          required: true
+    - name: api-v1-topology-id-profiling-restartworker-host-port
+      path: /api/v1/topology/{id}/profiling/restartworker/{host-port}
+      operations:
+      - name: post
+        method: POST
+        description: Restart worker
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: host-port
+          in: path
+          type: string
+          required: true
+    - name: api-v1-topology-id-profiling-start-host-port-timeout
+      path: /api/v1/topology/{id}/profiling/start/{host-port}/{timeout}
+      operations:
+      - name: post
+        method: POST
+        description: Start profiling
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: host-port
+          in: path
+          type: string
+          required: true
+        - name: timeout
+          in: path
+          type: string
+          required: true
+    - name: api-v1-topology-id-profiling-stop-host-port
+      path: /api/v1/topology/{id}/profiling/stop/{host-port}
+      operations:
+      - name: post
+        method: POST
+        description: Stop profiling
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: host-port
+          in: path
+          type: string
+          required: true
+    - name: api-v1-topology-id-rebalance-wait-time
+      path: /api/v1/topology/{id}/rebalance/{wait-time}
+      operations:
+      - name: post
+        method: POST
+        description: Rebalance topology
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: wait-time
+          in: path
+          type: string
+          required: true
+    - name: drpc-func
+      path: /drpc/{func}
+      operations:
+      - name: get
+        method: GET
+        description: DRPC function call (GET)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: func
+          in: path
+          type: string
+          required: true
+      - name: post
+        method: POST
+        description: DRPC function call (POST)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: func
+          in: path
+          type: string
+          required: true
+    - name: drpc-func-args
+      path: /drpc/{func}/{args}
+      operations:
+      - name: get
+        method: GET
+        description: DRPC function call with args
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: func
+          in: path
+          type: string
+          required: true
+        - name: args
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: apache-storm-rest
+    port: 8080
+    description: REST adapter for Apache Storm UI REST API. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/api/v1/cluster/configuration
+      name: api-v1-cluster-configuration
+      description: REST surface for api-v1-cluster-configuration.
+      operations:
+      - method: GET
+        name: get
+        description: Cluster configuration
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/cluster/summary
+      name: api-v1-cluster-summary
+      description: REST surface for api-v1-cluster-summary.
+      operations:
+      - method: GET
+        name: get
+        description: Cluster summary
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/history/summary
+      name: api-v1-history-summary
+      description: REST surface for api-v1-history-summary.
+      operations:
+      - method: GET
+        name: get
+        description: Topology history summary
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/nimbus/summary
+      name: api-v1-nimbus-summary
+      description: REST surface for api-v1-nimbus-summary.
+      operations:
+      - method: GET
+        name: get
+        description: Nimbus summary
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/owner-resources
+      name: api-v1-owner-resources
+      description: REST surface for api-v1-owner-resources.
+      operations:
+      - method: GET
+        name: get
+        description: Owner resource summary
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/supervisor
+      name: api-v1-supervisor
+      description: REST surface for api-v1-supervisor.
+      operations:
+      - method: GET
+        name: get
+        description: Supervisor details
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/supervisor/summary
+      name: api-v1-supervisor-summary
+      description: REST surface for api-v1-supervisor-summary.
+      operations:
+      - method: GET
+        name: get
+        description: Supervisor summary
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology-workers/{id}
+      name: api-v1-topology-workers-id
+      description: REST surface for api-v1-topology-workers-id.
+      operations:
+      - method: GET
+        name: get
+        description: Topology workers
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/summary
+      name: api-v1-topology-summary
+      description: REST surface for api-v1-topology-summary.
+      operations:
+      - method: GET
+        name: get
+        description: Topology summary
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}
+      name: api-v1-topology-id
+      description: REST surface for api-v1-topology-id.
+      operations:
+      - method: GET
+        name: get
+        description: Topology details
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/activate
+      name: api-v1-topology-id-activate
+      description: REST surface for api-v1-topology-id-activate.
+      operations:
+      - method: POST
+        name: post
+        description: Activate topology
+        call: apache-storm.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/component/{component}
+      name: api-v1-topology-id-component-component
+      description: REST surface for api-v1-topology-id-component-component.
+      operations:
+      - method: GET
+        name: get
+        description: Component stats
+        call: apache-storm.get
+        with:
+          component: rest.component
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/deactivate
+      name: api-v1-topology-id-deactivate
+      description: REST surface for api-v1-topology-id-deactivate.
+      operations:
+      - method: POST
+        name: post
+        description: Deactivate topology
+        call: apache-storm.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/kill/{wait-time}
+      name: api-v1-topology-id-kill-wait-time
+      description: REST surface for api-v1-topology-id-kill-wait-time.
+      operations:
+      - method: POST
+        name: post
+        description: Kill topology
+        call: apache-storm.post
+        with:
+          wait-time: rest.wait-time
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/metrics
+      name: api-v1-topology-id-metrics
+      description: REST surface for api-v1-topology-id-metrics.
+      operations:
+      - method: GET
+        name: get
+        description: Topology metrics
+        call: apache-storm.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/profiling/dumpheap/{host-port}
+      name: api-v1-topology-id-profiling-dumpheap-host-port
+      description: REST surface for api-v1-topology-id-profiling-dumpheap-host-port.
+      operations:
+      - method: POST
+        name: post
+        description: Dump heap
+        call: apache-storm.post
+        with:
+          host-port: rest.host-port
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/profiling/dumpjstack/{host-port}
+      name: api-v1-topology-id-profiling-dumpjstack-host-port
+      description: REST surface for api-v1-topology-id-profiling-dumpjstack-host-port.
+      operations:
+      - method: POST
+        name: post
+        description: Dump jstack
+        call: apache-storm.post
+        with:
+          host-port: rest.host-port
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/profiling/dumpprofile/{host-port}
+      name: api-v1-topology-id-profiling-dumpprofile-host-port
+      description: REST surface for api-v1-topology-id-profiling-dumpprofile-host-port.
+      operations:
+      - method: POST
+        name: post
+        description: Dump profile
+        call: apache-storm.post
+        with:
+          host-port: rest.host-port
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/profiling/restartworker/{host-port}
+      name: api-v1-topology-id-profiling-restartworker-host-port
+      description: REST surface for api-v1-topology-id-profiling-restartworker-host-port.
+      operations:
+      - method: POST
+        name: post
+        description: Restart worker
+        call: apache-storm.post
+        with:
+          host-port: rest.host-port
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/profiling/start/{host-port}/{timeout}
+      name: api-v1-topology-id-profiling-start-host-port-timeout
+      description: REST surface for api-v1-topology-id-profiling-start-host-port-timeout.
+      operations:
+      - method: POST
+        name: post
+        description: Start profiling
+        call: apache-storm.post
+        with:
+          host-port: rest.host-port
+          timeout: rest.timeout
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/profiling/stop/{host-port}
+      name: api-v1-topology-id-profiling-stop-host-port
+      description: REST surface for api-v1-topology-id-profiling-stop-host-port.
+      operations:
+      - method: POST
+        name: post
+        description: Stop profiling
+        call: apache-storm.post
+        with:
+          host-port: rest.host-port
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/api/v1/topology/{id}/rebalance/{wait-time}
+      name: api-v1-topology-id-rebalance-wait-time
+      description: REST surface for api-v1-topology-id-rebalance-wait-time.
+      operations:
+      - method: POST
+        name: post
+        description: Rebalance topology
+        call: apache-storm.post
+        with:
+          wait-time: rest.wait-time
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/drpc/{func}
+      name: drpc-func
+      description: REST surface for drpc-func.
+      operations:
+      - method: GET
+        name: get
+        description: DRPC function call (GET)
+        call: apache-storm.get
+        with:
+          func: rest.func
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: DRPC function call (POST)
+        call: apache-storm.post
+        with:
+          func: rest.func
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/drpc/{func}/{args}
+      name: drpc-func-args
+      description: REST surface for drpc-func-args.
+      operations:
+      - method: GET
+        name: get
+        description: DRPC function call with args
+        call: apache-storm.get
+        with:
+          func: rest.func
+          args: rest.args
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: apache-storm-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Apache Storm UI REST API. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: cluster-configuration
+      description: Cluster configuration
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: cluster-summary
+      description: Cluster summary
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: topology-history-summary
+      description: Topology history summary
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: nimbus-summary
+      description: Nimbus summary
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: owner-resource-summary
+      description: Owner resource summary
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: supervisor-details
+      description: Supervisor details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: supervisor-summary
+      description: Supervisor summary
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: topology-workers
+      description: Topology workers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: topology-summary
+      description: Topology summary
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: topology-details
+      description: Topology details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: activate-topology
+      description: Activate topology
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: component-stats
+      description: Component stats
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      with:
+        component: tools.component
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: deactivate-topology
+      description: Deactivate topology
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: kill-topology
+      description: Kill topology
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      with:
+        wait-time: tools.wait-time
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: topology-metrics
+      description: Topology metrics
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: dump-heap
+      description: Dump heap
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      with:
+        host-port: tools.host-port
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: dump-jstack
+      description: Dump jstack
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      with:
+        host-port: tools.host-port
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: dump-profile
+      description: Dump profile
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      with:
+        host-port: tools.host-port
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: restart-worker
+      description: Restart worker
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      with:
+        host-port: tools.host-port
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: start-profiling
+      description: Start profiling
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      with:
+        host-port: tools.host-port
+        timeout: tools.timeout
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: stop-profiling
+      description: Stop profiling
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      with:
+        host-port: tools.host-port
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: rebalance-topology
+      description: Rebalance topology
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      with:
+        wait-time: tools.wait-time
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: drpc-function-call-get
+      description: DRPC function call (GET)
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      with:
+        func: tools.func
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: drpc-function-call-post
+      description: DRPC function call (POST)
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: apache-storm.post
+      with:
+        func: tools.func
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: drpc-function-call-args
+      description: DRPC function call with args
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: apache-storm.get
+      with:
+        func: tools.func
+        args: tools.args
+      outputParameters:
+      - type: object
+        mapping: $.
