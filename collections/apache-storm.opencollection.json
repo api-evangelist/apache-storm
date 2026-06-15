@@ -1,0 +1,459 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Storm UI REST API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cluster configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/cluster/configuration"
+      },
+      "docs": "Cluster configuration"
+    },
+    {
+      "info": {
+        "name": "Cluster summary",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/cluster/summary"
+      },
+      "docs": "Cluster summary"
+    },
+    {
+      "info": {
+        "name": "Supervisor summary",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/supervisor/summary"
+      },
+      "docs": "Supervisor summary"
+    },
+    {
+      "info": {
+        "name": "Nimbus summary",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/nimbus/summary"
+      },
+      "docs": "Nimbus summary"
+    },
+    {
+      "info": {
+        "name": "Topology history summary",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/history/summary"
+      },
+      "docs": "Topology history summary"
+    },
+    {
+      "info": {
+        "name": "Supervisor details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/supervisor"
+      },
+      "docs": "Supervisor details"
+    },
+    {
+      "info": {
+        "name": "Owner resource summary",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/owner-resources"
+      },
+      "docs": "Owner resource summary"
+    },
+    {
+      "info": {
+        "name": "Topology summary",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/topology/summary"
+      },
+      "docs": "Topology summary"
+    },
+    {
+      "info": {
+        "name": "Topology workers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/topology-workers/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Topology workers"
+    },
+    {
+      "info": {
+        "name": "Topology details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/topology/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Topology details"
+    },
+    {
+      "info": {
+        "name": "Topology metrics",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/topology/:id/metrics",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Topology metrics"
+    },
+    {
+      "info": {
+        "name": "Component stats",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/topology/:id/component/:component",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "component",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Component stats"
+    },
+    {
+      "info": {
+        "name": "Start profiling",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/topology/:id/profiling/start/:host-port/:timeout",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "host-port",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "timeout",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Start profiling"
+    },
+    {
+      "info": {
+        "name": "Dump profile",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/topology/:id/profiling/dumpprofile/:host-port",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "host-port",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Dump profile"
+    },
+    {
+      "info": {
+        "name": "Stop profiling",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/topology/:id/profiling/stop/:host-port",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "host-port",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Stop profiling"
+    },
+    {
+      "info": {
+        "name": "Dump jstack",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/topology/:id/profiling/dumpjstack/:host-port",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "host-port",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Dump jstack"
+    },
+    {
+      "info": {
+        "name": "Dump heap",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/topology/:id/profiling/dumpheap/:host-port",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "host-port",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Dump heap"
+    },
+    {
+      "info": {
+        "name": "Restart worker",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/topology/:id/profiling/restartworker/:host-port",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "host-port",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Restart worker"
+    },
+    {
+      "info": {
+        "name": "Activate topology",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/topology/:id/activate",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Activate topology"
+    },
+    {
+      "info": {
+        "name": "Deactivate topology",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/topology/:id/deactivate",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Deactivate topology"
+    },
+    {
+      "info": {
+        "name": "Rebalance topology",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/topology/:id/rebalance/:wait-time",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "wait-time",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Rebalance topology"
+    },
+    {
+      "info": {
+        "name": "Kill topology",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/api/v1/topology/:id/kill/:wait-time",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "wait-time",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Kill topology"
+    },
+    {
+      "info": {
+        "name": "DRPC function call (GET)",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/drpc/:func",
+        "params": [
+          {
+            "name": "func",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "DRPC function call (GET)"
+    },
+    {
+      "info": {
+        "name": "DRPC function call (POST)",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://localhost:8080/drpc/:func",
+        "params": [
+          {
+            "name": "func",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "DRPC function call (POST)"
+    },
+    {
+      "info": {
+        "name": "DRPC function call with args",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://localhost:8080/drpc/:func/:args",
+        "params": [
+          {
+            "name": "func",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "args",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "DRPC function call with args"
+    }
+  ],
+  "bundled": true
+}
