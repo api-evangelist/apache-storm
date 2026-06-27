@@ -54,7 +54,7 @@ apis:
     properties:
       - type: Documentation
         url: https://storm.apache.org/documentation/Tutorial.html
-      - type: SDK
+      - type: SDKs
         url: https://search.maven.org/search?q=org.apache.storm
         title: Maven Java SDK
 common:
