@@ -58,6 +58,10 @@ apis:
         url: https://search.maven.org/search?q=org.apache.storm
         title: Maven Java SDK
 common:
+  - type: VulnerabilityDisclosure
+    url: security/apache-storm-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/apache-storm-domain-security.yml
   - type: GitHubRepository
     url: https://github.com/apache/storm
   - type: Documentation
@@ -108,6 +112,8 @@ common:
         description: Redis integration for stateful lookups and caching in Storm bolts.
       - name: Elasticsearch
         description: ElasticsearchBolt for indexing stream data into Elasticsearch.
+  - type: Blog
+    url: https://storm.apache.org/index.html
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
