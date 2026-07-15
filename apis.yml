@@ -58,6 +58,8 @@ apis:
         url: https://search.maven.org/search?q=org.apache.storm
         title: Maven Java SDK
 common:
+  - type: AgenticAccess
+    url: agentic-access/apache-storm-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/apache-storm-vulnerability-disclosure.yml
   - type: DomainSecurity
