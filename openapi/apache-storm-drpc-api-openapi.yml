@@ -1,0 +1,59 @@
+openapi: 3.1.0
+info:
+  title: Apache Storm UI REST Cluster Drpc API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Storm UI REST API exposing cluster, supervisor, nimbus, topology, and DRPC operations.
+servers:
+- url: http://localhost:8080
+  description: Storm UI
+tags:
+- name: Drpc
+paths:
+  /drpc/{func}:
+    get:
+      summary: DRPC function call (GET)
+      parameters:
+      - name: func
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Drpc
+    post:
+      summary: DRPC function call (POST)
+      parameters:
+      - name: func
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Drpc
+  /drpc/{func}/{args}:
+    get:
+      summary: DRPC function call with args
+      parameters:
+      - name: func
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: args
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Drpc
+x-generated-from: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+x-generated-by: claude-crawl-2026-05-08

@@ -1,0 +1,209 @@
+openapi: 3.1.0
+info:
+  title: Apache Storm UI REST Cluster Topology API
+  version: '1.0'
+  description: Minimal OpenAPI for the Apache Storm UI REST API exposing cluster, supervisor, nimbus, topology, and DRPC operations.
+servers:
+- url: http://localhost:8080
+  description: Storm UI
+tags:
+- name: Topology
+paths:
+  /api/v1/topology/summary:
+    get:
+      summary: Topology summary
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}:
+    get:
+      summary: Topology details
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/metrics:
+    get:
+      summary: Topology metrics
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/component/{component}:
+    get:
+      summary: Component stats
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      - name: component
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/profiling/start/{host-port}/{timeout}:
+    post:
+      summary: Start profiling
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      - name: host-port
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: timeout
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/profiling/dumpprofile/{host-port}:
+    post:
+      summary: Dump profile
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      - name: host-port
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/profiling/stop/{host-port}:
+    post:
+      summary: Stop profiling
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      - name: host-port
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/profiling/dumpjstack/{host-port}:
+    post:
+      summary: Dump jstack
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      - name: host-port
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/profiling/dumpheap/{host-port}:
+    post:
+      summary: Dump heap
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      - name: host-port
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/profiling/restartworker/{host-port}:
+    post:
+      summary: Restart worker
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      - name: host-port
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/activate:
+    post:
+      summary: Activate topology
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/deactivate:
+    post:
+      summary: Deactivate topology
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/rebalance/{wait-time}:
+    post:
+      summary: Rebalance topology
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      - name: wait-time
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+  /api/v1/topology/{id}/kill/{wait-time}:
+    post:
+      summary: Kill topology
+      parameters:
+      - $ref: '#/components/parameters/TopologyId'
+      - name: wait-time
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: OK
+      tags:
+      - Topology
+components:
+  parameters:
+    TopologyId:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+x-generated-from: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+x-generated-by: claude-crawl-2026-05-08
