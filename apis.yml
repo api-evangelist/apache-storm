@@ -6,9 +6,21 @@ description: >-
   guaranteed message processing, horizontal scalability, and fault tolerance. Storm integrates with queuing and database
   technologies including Apache Kafka and Apache Cassandra and is governed by the Apache Software Foundation.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-storm.png
 tags:
   - Distributed Computing
   - Event Processing
@@ -20,43 +32,113 @@ modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-storm/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: apache-storm:apache-storm-rest-api
-    name: Apache Storm REST API
-    description: >-
-      The Storm UI REST API provides HTTP endpoints for monitoring and managing Storm clusters, topologies, and
-      components. It exposes cluster summary, topology listing, topology detail, component statistics, supervisor info,
-      nimbus info, and topology actions (activate, deactivate, rebalance, kill). The API serves the Storm UI dashboard
-      and can be used programmatically.
-    humanURL: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
-    tags:
-      - REST
-      - Monitoring
-      - Cluster Management
-      - Topologies
-    properties:
-      - type: Documentation
-        url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
-      - url: openapi/apache-storm-openapi.yml
-        type: OpenAPI
-  - aid: apache-storm:apache-storm-topology-api
-    name: Apache Storm Topology API
-    description: >-
-      The Storm Topology API provides Java and other language bindings for building real-time processing topologies
-      composed of spouts (data sources) and bolts (processing units). It supports various stream groupings, windowing
-      operations, Trident micro-batch processing, and DRPC (Distributed Remote Procedure Calls) for synchronous
-      request/response patterns.
-    humanURL: https://storm.apache.org/documentation/Tutorial.html
-    tags:
-      - Java
-      - Topology
-      - Streaming
-      - Processing
-    properties:
-      - type: Documentation
-        url: https://storm.apache.org/documentation/Tutorial.html
-      - type: SDKs
-        url: https://search.maven.org/search?q=org.apache.storm
-        title: Maven Java SDK
+- aid: apache-storm:apache-storm-topology-api
+  name: Apache Storm Topology API
+  description: >-
+    The Storm Topology API provides Java and other language bindings for building real-time processing
+    topologies composed of spouts (data sources) and bolts (processing units). It supports various stream
+    groupings, windowing operations, Trident micro-batch processing, and DRPC (Distributed Remote Procedure
+    Calls) for synchronous request/response patterns.
+  humanURL: https://storm.apache.org/documentation/Tutorial.html
+  tags:
+  - Java
+  - Topology
+  - Streaming
+  - Processing
+  properties:
+  - type: Documentation
+    url: https://storm.apache.org/documentation/Tutorial.html
+  - type: SDKs
+    url: https://search.maven.org/search?q=org.apache.storm
+    title: Maven Java SDK
+- aid: apache-storm:apache-storm-cluster-api
+  name: Apache Storm Cluster API
+  description: The Cluster API from Apache Storm — 2 operation(s) for cluster.
+  humanURL: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+  tags:
+  - Cluster
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-storm-cluster-api-openapi.yml
+  - type: Documentation
+    url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+- aid: apache-storm:apache-storm-drpc-api
+  name: Apache Storm Drpc API
+  description: The Drpc API from Apache Storm — 2 operation(s) for drpc.
+  humanURL: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+  tags:
+  - Drpc
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-storm-drpc-api-openapi.yml
+  - type: Documentation
+    url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+- aid: apache-storm:apache-storm-history-api
+  name: Apache Storm History API
+  description: The History API from Apache Storm — 1 operation(s) for history.
+  humanURL: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+  tags:
+  - History
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-storm-history-api-openapi.yml
+  - type: Documentation
+    url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+- aid: apache-storm:apache-storm-nimbus-api
+  name: Apache Storm Nimbus API
+  description: The Nimbus API from Apache Storm — 1 operation(s) for nimbus.
+  humanURL: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+  tags:
+  - Nimbus
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-storm-nimbus-api-openapi.yml
+  - type: Documentation
+    url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+- aid: apache-storm:apache-storm-owner-resources-api
+  name: Apache Storm Owner Resources API
+  description: The Owner Resources API from Apache Storm — 1 operation(s) for owner resources.
+  humanURL: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+  tags:
+  - Owner Resources
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-storm-owner-resources-api-openapi.yml
+  - type: Documentation
+    url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+- aid: apache-storm:apache-storm-supervisor-api
+  name: Apache Storm Supervisor API
+  description: The Supervisor API from Apache Storm — 2 operation(s) for supervisor.
+  humanURL: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+  tags:
+  - Supervisor
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-storm-supervisor-api-openapi.yml
+  - type: Documentation
+    url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+- aid: apache-storm:apache-storm-topology-api
+  name: Apache Storm Topology API
+  description: The Topology API from Apache Storm — 14 operation(s) for topology.
+  humanURL: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+  tags:
+  - Topology
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-storm-topology-api-openapi.yml
+  - type: Documentation
+    url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+- aid: apache-storm:apache-storm-topology-workers-api
+  name: Apache Storm Topology Workers API
+  description: The Topology Workers API from Apache Storm — 1 operation(s) for topology workers.
+  humanURL: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+  tags:
+  - Topology Workers
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-storm-topology-workers-api-openapi.yml
+  - type: Documentation
+    url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
 common:
   - type: AgenticAccess
     url: agentic-access/apache-storm-agentic-access.yml
