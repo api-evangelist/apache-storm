@@ -1,0 +1,28 @@
+{
+  "provider": "apache-storm",
+  "sources": [
+    "apache-storm-cluster-api-openapi.yml",
+    "apache-storm-drpc-api-openapi.yml",
+    "apache-storm-history-api-openapi.yml",
+    "apache-storm-nimbus-api-openapi.yml",
+    "apache-storm-owner-resources-api-openapi.yml",
+    "apache-storm-supervisor-api-openapi.yml",
+    "apache-storm-topology-api-openapi.yml",
+    "apache-storm-topology-workers-api-openapi.yml"
+  ],
+  "outputs": [
+    "apache-storm-cluster-api-openapi.yml",
+    "apache-storm-drpc-api-openapi.yml",
+    "apache-storm-history-api-openapi.yml",
+    "apache-storm-nimbus-api-openapi.yml",
+    "apache-storm-owner-resources-api-openapi.yml",
+    "apache-storm-supervisor-api-openapi.yml",
+    "apache-storm-topology-api-openapi.yml",
+    "apache-storm-topology-workers-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
