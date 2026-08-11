@@ -140,6 +140,15 @@ apis:
   - type: Documentation
     url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
 common:
+  - type: IssueTracker
+    url: https://github.com/apache/storm/issues
+  - type: SecurityPolicy
+    url: https://github.com/apache/storm/blob/master/SECURITY.md
+  - type: CodeOfConduct
+    url: https://github.com/apache/.github/blob/main/.github/CODE_OF_CONDUCT.md
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/apache/storm/blob/master/LICENSE
   - type: AgenticAccess
     url: agentic-access/apache-storm-agentic-access.yml
   - type: VulnerabilityDisclosure
