@@ -1,0 +1,313 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Storm UI REST Cluster Topology API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Topology",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Topology summary",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/topology/summary"
+          },
+          "docs": "Topology summary"
+        },
+        {
+          "info": {
+            "name": "Topology details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/topology/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Topology details"
+        },
+        {
+          "info": {
+            "name": "Topology metrics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/topology/:id/metrics",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Topology metrics"
+        },
+        {
+          "info": {
+            "name": "Component stats",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/topology/:id/component/:component",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "component",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Component stats"
+        },
+        {
+          "info": {
+            "name": "Start profiling",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/topology/:id/profiling/start/:host-port/:timeout",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "host-port",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "timeout",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Start profiling"
+        },
+        {
+          "info": {
+            "name": "Dump profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/topology/:id/profiling/dumpprofile/:host-port",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "host-port",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Dump profile"
+        },
+        {
+          "info": {
+            "name": "Stop profiling",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/topology/:id/profiling/stop/:host-port",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "host-port",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Stop profiling"
+        },
+        {
+          "info": {
+            "name": "Dump jstack",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/topology/:id/profiling/dumpjstack/:host-port",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "host-port",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Dump jstack"
+        },
+        {
+          "info": {
+            "name": "Dump heap",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/topology/:id/profiling/dumpheap/:host-port",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "host-port",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Dump heap"
+        },
+        {
+          "info": {
+            "name": "Restart worker",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/topology/:id/profiling/restartworker/:host-port",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "host-port",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Restart worker"
+        },
+        {
+          "info": {
+            "name": "Activate topology",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/topology/:id/activate",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Activate topology"
+        },
+        {
+          "info": {
+            "name": "Deactivate topology",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/topology/:id/deactivate",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deactivate topology"
+        },
+        {
+          "info": {
+            "name": "Rebalance topology",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/topology/:id/rebalance/:wait-time",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "wait-time",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Rebalance topology"
+        },
+        {
+          "info": {
+            "name": "Kill topology",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/api/v1/topology/:id/kill/:wait-time",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "wait-time",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Kill topology"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

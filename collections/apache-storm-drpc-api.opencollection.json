@@ -1,0 +1,77 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Storm UI REST Cluster Drpc API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Drpc",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "DRPC function call (GET)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/drpc/:func",
+            "params": [
+              {
+                "name": "func",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "DRPC function call (GET)"
+        },
+        {
+          "info": {
+            "name": "DRPC function call (POST)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://localhost:8080/drpc/:func",
+            "params": [
+              {
+                "name": "func",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "DRPC function call (POST)"
+        },
+        {
+          "info": {
+            "name": "DRPC function call with args",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/drpc/:func/:args",
+            "params": [
+              {
+                "name": "func",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "args",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "DRPC function call with args"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

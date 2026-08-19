@@ -1,0 +1,152 @@
+{
+  "item": [
+    {
+      "id": "cf37e4f8-c711-4ac5-a6d1-992fee5a540b",
+      "name": "Supervisor",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ea86f762-1eb1-4ad8-8690-b6b42757cc5a",
+          "name": "Supervisor summary",
+          "request": {
+            "name": "Supervisor summary",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "supervisor",
+                "summary"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0041cfa0-1e34-4f8a-a575-0b366e2655ee",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "supervisor",
+                    "summary"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4d64734c-2320-4fee-a98c-12853dc9a0ad",
+          "name": "Supervisor details",
+          "request": {
+            "name": "Supervisor details",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "supervisor"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "53e64d28-1efd-495f-b634-eef54bb5577c",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "supervisor"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8080",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "3c0751c5-50f7-4358-b953-a5fc4e01914c",
+    "name": "Apache Storm UI REST Cluster Supervisor API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI for the Apache Storm UI REST API exposing cluster, supervisor, nimbus, topology, and DRPC operations.",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Storm UI REST Cluster Supervisor API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Supervisor",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Supervisor summary",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/supervisor/summary"
+          },
+          "docs": "Supervisor summary"
+        },
+        {
+          "info": {
+            "name": "Supervisor details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/supervisor"
+          },
+          "docs": "Supervisor details"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache Storm UI REST Cluster Topology Workers API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Topology Workers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Topology workers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://localhost:8080/api/v1/topology-workers/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Topology workers"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

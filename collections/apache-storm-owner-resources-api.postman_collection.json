@@ -1,0 +1,91 @@
+{
+  "item": [
+    {
+      "id": "8bbde482-7806-47a3-974f-26d9b75a91ff",
+      "name": "Owner Resources",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "92e0235c-a69e-474d-8fc9-bd30815b41f4",
+          "name": "Owner resource summary",
+          "request": {
+            "name": "Owner resource summary",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "owner-resources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3fede773-ebbd-4e8a-9c83-1d6a8e86caf9",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "owner-resources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8080",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "b5e75fb7-474b-48b7-b464-1d933ffcdd27",
+    "name": "Apache Storm UI REST Cluster Owner Resources API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Minimal OpenAPI for the Apache Storm UI REST API exposing cluster, supervisor, nimbus, topology, and DRPC operations.",
+      "type": "text/plain"
+    }
+  }
+}
