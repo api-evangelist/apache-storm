@@ -2,21 +2,21 @@
   "repo": "apache-storm",
   "feeds": [
     {
-      "source": "https://storm.apache.org/index.html",
-      "feed_url": "https://storm.apache.org/index.html",
-      "title": "",
-      "saved": 0,
-      "method": "none"
-    },
-    {
       "source": "https://www.apache.org/licenses/",
       "feed_url": "https://www.apache.org/licenses/",
       "title": "",
       "saved": 0,
       "method": "none"
+    },
+    {
+      "source": "https://storm.apache.org/index.html",
+      "feed_url": "https://storm.apache.org/index.html",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "fetched": "2026-08-30T22:33:40Z",
+  "fetched": "2026-09-06T19:17:18Z",
   "post_count": 10,
   "feed_nature": "undetermined",
   "feed_nature_basis": null,

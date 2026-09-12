@@ -160,6 +160,8 @@ apis:
   - type: Documentation
     url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
 common:
+  - type: Website
+    url: https://www.apache.org/
   - type: IssueTracker
     url: https://github.com/apache/storm/issues
   - type: SecurityPolicy
