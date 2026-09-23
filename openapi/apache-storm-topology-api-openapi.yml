@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Apache Storm UI REST Cluster Topology API
+  title: Apache Storm UI REST Topology API
   version: '1.0'
   description: Minimal OpenAPI for the Apache Storm UI REST API exposing cluster, supervisor, nimbus, topology, and DRPC operations.
 servers:
@@ -17,6 +17,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: getApiV1TopologySummary
+      x-operation-id-source: derived
   /api/v1/topology/{id}:
     get:
       summary: Topology details
@@ -27,6 +29,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: getApiV1TopologyById
+      x-operation-id-source: derived
   /api/v1/topology/{id}/metrics:
     get:
       summary: Topology metrics
@@ -37,6 +41,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: getApiV1TopologyByIdMetrics
+      x-operation-id-source: derived
   /api/v1/topology/{id}/component/{component}:
     get:
       summary: Component stats
@@ -52,6 +58,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: getApiV1TopologyByIdComponentByComponent
+      x-operation-id-source: derived
   /api/v1/topology/{id}/profiling/start/{host-port}/{timeout}:
     post:
       summary: Start profiling
@@ -72,6 +80,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: postApiV1TopologyByIdProfilingStartByHostPortByTimeout
+      x-operation-id-source: derived
   /api/v1/topology/{id}/profiling/dumpprofile/{host-port}:
     post:
       summary: Dump profile
@@ -87,6 +97,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: postApiV1TopologyByIdProfilingDumpprofileByHostPort
+      x-operation-id-source: derived
   /api/v1/topology/{id}/profiling/stop/{host-port}:
     post:
       summary: Stop profiling
@@ -102,6 +114,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: postApiV1TopologyByIdProfilingStopByHostPort
+      x-operation-id-source: derived
   /api/v1/topology/{id}/profiling/dumpjstack/{host-port}:
     post:
       summary: Dump jstack
@@ -117,6 +131,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: postApiV1TopologyByIdProfilingDumpjstackByHostPort
+      x-operation-id-source: derived
   /api/v1/topology/{id}/profiling/dumpheap/{host-port}:
     post:
       summary: Dump heap
@@ -132,6 +148,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: postApiV1TopologyByIdProfilingDumpheapByHostPort
+      x-operation-id-source: derived
   /api/v1/topology/{id}/profiling/restartworker/{host-port}:
     post:
       summary: Restart worker
@@ -147,6 +165,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: postApiV1TopologyByIdProfilingRestartworkerByHostPort
+      x-operation-id-source: derived
   /api/v1/topology/{id}/activate:
     post:
       summary: Activate topology
@@ -157,6 +177,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: postApiV1TopologyByIdActivate
+      x-operation-id-source: derived
   /api/v1/topology/{id}/deactivate:
     post:
       summary: Deactivate topology
@@ -167,6 +189,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: postApiV1TopologyByIdDeactivate
+      x-operation-id-source: derived
   /api/v1/topology/{id}/rebalance/{wait-time}:
     post:
       summary: Rebalance topology
@@ -182,6 +206,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: postApiV1TopologyByIdRebalanceByWaitTime
+      x-operation-id-source: derived
   /api/v1/topology/{id}/kill/{wait-time}:
     post:
       summary: Kill topology
@@ -197,6 +223,8 @@ paths:
           description: OK
       tags:
       - Topology
+      operationId: postApiV1TopologyByIdKillByWaitTime
+      x-operation-id-source: derived
 components:
   parameters:
     TopologyId:
