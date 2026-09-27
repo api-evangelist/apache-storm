@@ -40,37 +40,19 @@ tags:
   - Event Processing
   - Real-Time
   - Stream Processing
-  - Open-Source
+  - Open Source
 tags_raw:
   - Distributed Computing
   - Event Processing
   - Real-Time
   - Stream Processing
   - Open Source
+  - Open-Source
 created: '2026-03-16'
 modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/apache-storm/refs/heads/main/apis.yml
 specificationVersion: '0.23'
 apis:
-- aid: apache-storm:apache-storm-topology-api
-  name: Apache Storm Topology API
-  description: >-
-    The Storm Topology API provides Java and other language bindings for building real-time processing
-    topologies composed of spouts (data sources) and bolts (processing units). It supports various stream
-    groupings, windowing operations, Trident micro-batch processing, and DRPC (Distributed Remote Procedure
-    Calls) for synchronous request/response patterns.
-  humanURL: https://storm.apache.org/documentation/Tutorial.html
-  tags:
-  - Java
-  - Topology
-  - Streaming
-  - Processing
-  properties:
-  - type: Documentation
-    url: https://storm.apache.org/documentation/Tutorial.html
-  - type: SDKs
-    url: https://search.maven.org/search?q=org.apache.storm
-    title: Maven Java SDK
 - aid: apache-storm:apache-storm-cluster-api
   name: Apache Storm Cluster API
   description: The Cluster API from Apache Storm — 2 operation(s) for cluster.
@@ -139,15 +121,26 @@ apis:
     url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
 - aid: apache-storm:apache-storm-topology-api
   name: Apache Storm Topology API
-  description: The Topology API from Apache Storm — 14 operation(s) for topology.
-  humanURL: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+  description: The Storm Topology API provides Java and other language bindings for building real-time processing
+    topologies composed of spouts (data sources) and bolts (processing units). It supports various stream
+    groupings, windowing operations, Trident micro-batch processing, and DRPC (Distributed Remote Procedure
+    Calls) for synchronous request/response patterns.
+  humanURL: https://storm.apache.org/documentation/Tutorial.html
   tags:
   - Topology
+  - Java
+  - Streaming
+  - Processing
   properties:
   - type: OpenAPI
     url: openapi/apache-storm-topology-api-openapi.yml
   - type: Documentation
     url: https://storm.apache.org/releases/current/STORM-UI-REST-API.html
+  - type: Documentation
+    url: https://storm.apache.org/documentation/Tutorial.html
+  - type: SDKs
+    url: https://search.maven.org/search?q=org.apache.storm
+    title: Maven Java SDK
 - aid: apache-storm:apache-storm-topology-workers-api
   name: Apache Storm Topology Workers API
   description: The Topology Workers API from Apache Storm — 1 operation(s) for topology workers.
