@@ -1,4 +1,4 @@
-# Apache Storm (apache-storm)
+# Apache Storm
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,83 +66,132 @@
 
 Apache Storm is a free and open-source distributed real-time computation system that makes it easy to reliably process unbounded streams of data at scale. It provides a simple programming model (topologies with spouts and bolts), guaranteed message processing, horizontal scalability, and fault tolerance. Storm integrates with queuing and database technologies including Apache Kafka and Apache Cassandra and is governed by the Apache Software Foundation.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/apache-storm/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/apache-storm/refs/heads/main/apis.yml)
+**Areas:** Distributed Computing · Event Processing · Real-Time · Stream Processing · Open Source
 
-## Scope
+## Apache Storm on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Apache Storm is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apache-storm/](https://apis.io/providers/apache-storm/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- Distributed Computing
-- Event Processing
-- Real-Time
-- Stream Processing
-- Open Source
+- [Apache Storm Cluster API](https://apis.io/apis/apache-storm/apache-storm-cluster-api/) — The Cluster API from Apache Storm — 2 operation(s) for cluster.
+- [Apache Storm Drpc API](https://apis.io/apis/apache-storm/apache-storm-drpc-api/) — The Drpc API from Apache Storm — 2 operation(s) for drpc.
+- [Apache Storm History API](https://apis.io/apis/apache-storm/apache-storm-history-api/) — The History API from Apache Storm — 1 operation(s) for history.
+- [Apache Storm Nimbus API](https://apis.io/apis/apache-storm/apache-storm-nimbus-api/) — The Nimbus API from Apache Storm — 1 operation(s) for nimbus.
+- [Apache Storm Owner Resources API](https://apis.io/apis/apache-storm/apache-storm-owner-resources-api/) — The Owner Resources API from Apache Storm — 1 operation(s) for owner resources.
+- [Apache Storm Supervisor API](https://apis.io/apis/apache-storm/apache-storm-supervisor-api/) — The Supervisor API from Apache Storm — 2 operation(s) for supervisor.
+- [Apache Storm Topology API](https://apis.io/apis/apache-storm/apache-storm-topology-api/) — The Storm Topology API provides Java and other language bindings for building real-time processing topologies composed of spouts (data sources) and bolts…
+- [Apache Storm Topology Workers API](https://apis.io/apis/apache-storm/apache-storm-topology-workers-api/) — The Topology Workers API from Apache Storm — 1 operation(s) for topology workers.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Apache Storm REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Storm UI REST API provides HTTP endpoints for monitoring and managing Storm clusters, topologies, and components. It exposes cluster summary, topology listing, topology detail, component statistics, supervisor info, nimbus info, and topology actions (activate, deactivate, rebalance, kill). The API serves the Storm UI dashboard and can be used programmatically.
+- [Apache Storm Agentic Access](https://apis.io/agentic-access/apache-storm/apache-storm-agentic-access/)
 
-- **Human URL:** [https://storm.apache.org/releases/current/STORM-UI-REST-API.html](https://storm.apache.org/releases/current/STORM-UI-REST-API.html)
+#### Collections (9)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- REST
-- Monitoring
-- Cluster Management
-- Topologies
+- [Apache Storm UI REST API](https://apis.io/collections/apache-storm/open-apache-storm/)
+- [Apache Storm UI REST Cluster API](https://apis.io/collections/apache-storm/open-apache-storm-cluster-api/)
+- [Apache Storm UI REST Cluster Drpc API](https://apis.io/collections/apache-storm/open-apache-storm-drpc-api/)
+- [Apache Storm UI REST Cluster History API](https://apis.io/collections/apache-storm/open-apache-storm-history-api/)
+- [Apache Storm UI REST Cluster Nimbus API](https://apis.io/collections/apache-storm/open-apache-storm-nimbus-api/)
+- [Apache Storm UI REST Cluster Owner Resources API](https://apis.io/collections/apache-storm/open-apache-storm-owner-resources-api/)
+- [Apache Storm UI REST Cluster Supervisor API](https://apis.io/collections/apache-storm/open-apache-storm-supervisor-api/)
+- [Apache Storm UI REST Cluster Topology API](https://apis.io/collections/apache-storm/open-apache-storm-topology-api/)
+- [Apache Storm UI REST Cluster Topology Workers API](https://apis.io/collections/apache-storm/open-apache-storm-topology-workers-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://storm.apache.org/releases/current/STORM-UI-REST-API.html)
-- [OpenAPI](openapi/apache-storm-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/apache-storm.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/apache-storm.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Apache Storm Topology API
+- [Apache Storm Domain Security](https://apis.io/security/apache-storm/apache-storm-domain-security/)
+- [Apache Storm Vulnerability Disclosure](https://apis.io/security/apache-storm/apache-storm-vulnerability-disclosure/)
 
-The Storm Topology API provides Java and other language bindings for building real-time processing topologies composed of spouts (data sources) and bolts (processing units). It supports various stream groupings, windowing operations, Trident micro-batch processing, and DRPC (Distributed Remote Procedure Calls) for synchronous request/response patterns.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://storm.apache.org/documentation/Tutorial.html](https://storm.apache.org/documentation/Tutorial.html)
+Published plans, tiers and prices.
 
-#### Tags
+- [Apache Storm Plans Pricing](https://apis.io/plans/apache-storm/apache-storm-plans-pricing/)
 
-- Java
-- Topology
-- Streaming
-- Processing
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://storm.apache.org/documentation/Tutorial.html)
-- [SDK](https://search.maven.org/search?q=org.apache.storm)
-- [Postman Collection](collections/apache-storm.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/apache-storm.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Apache Storm Rate Limits](https://apis.io/rate-limits/apache-storm/apache-storm-rate-limits/)
 
-## Common Properties
+#### FinOps (1)
 
-- [GitHub Repository](https://github.com/apache/storm)
+What the API costs to run, by operation.
+
+- [Apache Storm Finops](https://apis.io/finops/apache-storm/apache-storm-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.apache.org/)
 - [Documentation](https://storm.apache.org/documentation/Home.html)
-- [Portal](https://storm.apache.org/)
-- [Getting Started](https://storm.apache.org/releases/current/Setting-up-development-environment.html)
-- [Release Notes](https://github.com/apache/storm/releases)
+- [Getting started](https://storm.apache.org/releases/current/Setting-up-development-environment.html)
 - [Support](https://storm.apache.org/contribute/People.html)
-- [Terms of Service](https://www.apache.org/licenses/)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
+- [Blog](https://storm.apache.org/index.html)
+- [Terms of service](https://www.apache.org/licenses/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** info@apievangelist.com
+**Kin Score 36.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 33.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 18.4 |
+
+**Agent readiness 15.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apache-storm/](https://apis.io/providers/apache-storm/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apache Storm: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apache-storm/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
